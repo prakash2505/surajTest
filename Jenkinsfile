@@ -19,18 +19,18 @@ pipeline{
             }
         }
         
-        stage('Terraform Init'){
-            steps{
-                sh label: '',script: 'terraform init'
-            }
-        }
+        // stage('Terraform Init'){
+        //     steps{
+        //         sh label: '',script: 'terraform init'
+        //     }
+        // }
         
-        stage('Terraform apply'){
-            steps{
-                echo "Terraform action from the parameter is --->${action}"
-                sh label: '',script: 'terraform ${action} --auto-approve'
-            }
-        }
+        // stage('Terraform apply'){
+        //     steps{
+        //         echo "Terraform action from the parameter is --->${action}"
+        //         sh label: '',script: 'terraform ${action} --auto-approve'
+        //     }
+        // }
 //        stage('Plan') {
 //            steps {
 //                sh 'pwd;cd terraform/aws-instance-first-script ; terraform init -input=false'
